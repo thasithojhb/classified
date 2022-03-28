@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+EZ/8KaswOHM1qLO+dfgUEWh98gyzAu7wp7h9F6m65C8BPIvykE6hLkSxe8HAj8LA42rnXfDiaoI/sHmRCh9Mg==",
+  "dgSpecHash": "S1U4uErG27GXDlw4OoY1yIZiWmEnin15jbhjF7Vef2XTAWDKTX/FNLlK0jGhOpUWxeoQro4V4nj6hwrmMSGVcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thato\\RiderProjects\\Classifieds\\Classifieds\\Classifieds.csproj",
+  "projectFilePath": "C:\\Users\\thato\\classified\\Classified_Server\\Classifieds\\Classifieds.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thato\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\thato\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

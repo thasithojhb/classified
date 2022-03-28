@@ -13,9 +13,7 @@ class Signup {
     if (!res['valid']) {
       return false;
     }
-    print(res);
     prefs.setString('token', res['token']);
-    print(prefs.getString('token'));
     return true;
   }
 }

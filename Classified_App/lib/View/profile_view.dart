@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:untitled/View/login_page.dart';
+import 'package:untitled/View/login_view.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);

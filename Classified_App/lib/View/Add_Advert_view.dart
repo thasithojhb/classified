@@ -1,22 +1,21 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Controller/controller.dart';
 import 'package:untitled/Controller/form_controller.dart';
-import 'package:untitled/View/quote_view.dart';
+import 'package:untitled/View/product_view.dart';
 
 import 'package:flutter/material.dart';
 
 
-class FormPage extends StatefulWidget {
-  const FormPage({Key? key}) : super(key: key);
+class AddAdvert extends StatefulWidget {
+  const AddAdvert({Key? key}) : super(key: key);
 
 
   @override
   _FormPageState createState() => _FormPageState();
 }
 
-class _FormPageState extends State<FormPage> {
+class _FormPageState extends State<AddAdvert> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

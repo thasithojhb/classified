@@ -1,33 +1,24 @@
-import 'dart:convert';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:untitled/models/quote.dart';
-import 'package:http/http.dart' as http;
 
-import 'package:untitled/HTTPservice.dart';
 
 class Product extends ChangeNotifier {
 
-  // Future<dynamic> getData () =>  HTTPService().fetchQuotes();
-  final List<Map> _quoteList = [];
+  final List<Map> _productWantedList = [];
+  final List<Map> _productForSaleList = [];
 
-  List<Map> get getQuoteList => this._quoteList;
-  // set setData(BuildContext context) {
-  //   Future<dynamic> response = this.getData();
-  //   notifyListeners();
-  //   for ( Map quote in jsonDecode(response.toString())) {
-  //     this.addQuote(quote);
-  //   }
-  //   print('${this._quoteList} joj');
-  // }
-  void addQuote(Map quote) {
-    this._quoteList.add(quote);
+  List<Map> get getProductForSaleList => _productForSaleList;
+  List<Map> get getProductWantedList => _productWantedList;
+
+  void addProductForSale(Map quote) {
+    _productForSaleList.add(quote);
     notifyListeners();
   }
 
-  void addAllQuote(List<Map> quote) {
-    this._quoteList.clear();
-    this._quoteList.addAll(quote);
+  void addProductsForSale(List<Map> quote) {
+    _productForSaleList.addAll(quote);
+    notifyListeners();
   }
 }

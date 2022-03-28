@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xnUNwEC0QuSZdiQtenUZPi/ZPYRgZjNzWuYtcAJAvFZn8qsqJ/BBY7NkjnGI86J0W2aYJNWw8mzfibkurZNfxw==",
+  "dgSpecHash": "YL7rEvhJwLSw4abELsdrDxono5VVgzjbwwrBtT3X18+LiJAhrH844MBtq8WYZiYQRdpHNekWLR4RXlv7hoVw5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thato\\RiderProjects\\Classifieds\\Classified.test\\Classified.test.csproj",
+  "projectFilePath": "C:\\Users\\thato\\classified\\Classified_Server\\Classified.test\\Classified.test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thato\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\thato\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",

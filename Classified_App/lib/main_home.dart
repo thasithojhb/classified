@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/View/home.dart';
-import 'package:untitled/View/profile.dart';
+import 'package:untitled/View/home_view.dart';
+import 'package:untitled/View/profile_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

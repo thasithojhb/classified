@@ -5,14 +5,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:untitled/View/login_page.dart';
+import 'package:untitled/View/login_view.dart';
 import 'package:untitled/main_home.dart';
-import 'package:untitled/View/form_page.dart';
-import 'package:untitled/View/quote_view.dart';
-import 'package:untitled/View/quotes_list_view.dart';
+import 'package:untitled/View/Add_Advert_view.dart';
+import 'package:untitled/View/product_view.dart';
+import 'package:untitled/View/classified_for_sale_view.dart';
 import 'package:untitled/models/product.dart';
 
-import 'Controller/controller.dart';
 
 void main() {
   HttpOverrides.global = MyHttpOverrides();

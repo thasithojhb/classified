@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/src/provider.dart';
-import 'package:untitled/Controller/controller.dart';
-import 'package:untitled/View/form_page.dart';
-import 'package:untitled/View/quote_view.dart';
-import 'package:untitled/View/quotes_list_view.dart';
+import 'package:untitled/View/Add_Advert_view.dart';
+import 'package:untitled/View/product_view.dart';
+import 'package:untitled/View/classified_for_sale_view.dart';
 import 'package:untitled/models/product.dart';
+
+import 'classified_wanted_view.dart';
 
 class Home extends StatelessWidget {
 
@@ -36,10 +37,10 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          body: TabBarView(
+          body: const TabBarView(
             children: [
-              QuoteListView(),
-              QuoteListView(),
+              ClassifiedForSaleView (),
+              ClassifiedWantedView(),
             ],
           ),
         )

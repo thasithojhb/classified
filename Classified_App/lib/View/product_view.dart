@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class QuoteView extends StatelessWidget {
+class ProductView extends StatelessWidget {
   final Map product;
-  const QuoteView( this.product, {Key? key}) : super(key: key);
+  const ProductView( this.product, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

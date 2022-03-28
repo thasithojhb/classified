@@ -1485,11 +1485,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thato\\RiderProjects\\Classifieds\\Classifieds\\Classifieds.csproj",
+      "projectUniqueName": "C:\\Users\\thato\\classified\\Classified_Server\\Classifieds\\Classifieds.csproj",
       "projectName": "Classifieds",
-      "projectPath": "C:\\Users\\thato\\RiderProjects\\Classifieds\\Classifieds\\Classifieds.csproj",
+      "projectPath": "C:\\Users\\thato\\classified\\Classified_Server\\Classifieds\\Classifieds.csproj",
       "packagesPath": "C:\\Users\\thato\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thato\\RiderProjects\\Classifieds\\Classifieds\\obj\\",
+      "outputPath": "C:\\Users\\thato\\classified\\Classified_Server\\Classifieds\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

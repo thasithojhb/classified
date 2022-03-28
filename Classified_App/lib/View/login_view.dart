@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/View/signup_page.dart';
+import 'package:untitled/View/signup_view.dart';
 import 'package:untitled/main_home.dart';
 
 

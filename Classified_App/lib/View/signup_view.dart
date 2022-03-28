@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/Controller/signup_controller.dart';
-import 'package:untitled/View/home.dart';
+import 'package:untitled/View/home_view.dart';
 import 'package:untitled/main_home.dart';
 import 'package:untitled/models/Login.dart';
 
@@ -20,6 +20,8 @@ class _StartPageState extends State<SignUpPage> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController userNameController = TextEditingController();
+
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -93,8 +95,21 @@ class _StartPageState extends State<SignUpPage> {
                     margin: const EdgeInsets.only(top: 20.0),
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: ElevatedButton(
-                      child: const Text('Sign Up'),
+                      child: _isLoading ?
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          CircularProgressIndicator( color: Colors.white,),
+                          SizedBox(width: 24,),
+                          Text('Please Wait')
+                        ],): const Text('Sign Up'),
                       onPressed: () async {
+                        if (_isLoading) {
+                          return;
+                        }
+                        setState(() {
+                          _isLoading = true;
+                        });
                         if (nameController.text.isEmpty || passwordController.text.isEmpty ||
                             emailController.text.isEmpty || userNameController.text.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -102,6 +117,7 @@ class _StartPageState extends State<SignUpPage> {
                                   content: Text('Input Missing'))
                           );
                         } else if (await Signup().validate(nameController.text, userNameController.text, emailController.text, passwordController.text)) {
+                          await Login().getProducts(context);
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(builder: (BuildContext context) => const HomePage()),
@@ -113,6 +129,9 @@ class _StartPageState extends State<SignUpPage> {
                                   content: Text('Email Already Exist'))
                           );
                         }
+                        setState(() {
+                          _isLoading = false;
+                        });
                       },
                     )
                 ),
