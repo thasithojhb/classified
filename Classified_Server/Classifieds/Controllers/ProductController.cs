@@ -47,13 +47,6 @@ namespace Classifieds.Controllers
             return list;
         }
 
-        // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public ActionResult<Product> Get(int id)
-        {
-            return _userContext.Products.Find(id);
-        }
-
         // POST api/<UserController>
         [HttpPost]
         public ProductResponse Post([FromBody] Product value)
@@ -97,16 +90,6 @@ namespace Classifieds.Controllers
         [HttpPut("{id}")]
         public User Put(int id, [FromBody] User value)
         {
-            /*var oldUser = _userContext.Users.Find(id);
-            oldUser.Name = value.Name;
-            oldUser.Email = value.Email;
-            oldUser.Password = value.Password;
-
-            _userContext.SaveChanges();*/
-
-            value.Id = id;
-            _userContext.Entry(value).State = EntityState.Modified;
-            _userContext.SaveChanges();
             return value;
         }
 
@@ -114,8 +97,6 @@ namespace Classifieds.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            _userContext.Users.Remove(_userContext.Users.Find(id));
-            _userContext.SaveChanges();
         }
         
     }

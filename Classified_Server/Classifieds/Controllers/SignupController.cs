@@ -28,12 +28,7 @@ namespace Classifieds.Controllers
         }
 
         // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public ActionResult<User> Get(int id)
-        {
-            return _userContext.Users.Find(id);
-        }
-
+        
         // POST api/<UserController>
         [HttpPost]
         public Response Post([FromBody] User value)
@@ -70,38 +65,23 @@ namespace Classifieds.Controllers
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public User Put(int id, [FromBody] User value)
+        public void Put(int id, [FromBody] User value)
         {
-            /*var oldUser = _userContext.Users.Find(id);
-            oldUser.Name = value.Name;
-            oldUser.Email = value.Email;
-            oldUser.Password = value.Password;
-
-            _userContext.SaveChanges();*/
-
-            value.Id = id;
-            _userContext.Entry(value).State = EntityState.Modified;
-            _userContext.SaveChanges();
-            return value;
         }
 
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            _userContext.Users.Remove(_userContext.Users.Find(id));
-            _userContext.SaveChanges();
         }
 
         private  string GetHash(string text)
         {
             // SHA512 is disposable by inheritance.  
-            using (var sha256 = SHA256.Create())
-            {
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(text));
-                // Get the hashed string.  
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-            }
+            using var sha256 = SHA256.Create();
+            var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(text));
+            // Get the hashed string.  
+            return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
         }
     }
 }

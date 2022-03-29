@@ -4,6 +4,7 @@ using System.Net;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using Classifieds;
+using Classifieds.Models;
 using FluentAssertions;
 using Newtonsoft.Json;
 using Xunit;
@@ -27,8 +28,7 @@ public class UnitTest1
         using var client = new TestClientProvider().Client;
         var response =  await client.GetAsync("/WeatherForecast");
         response.EnsureSuccessStatusCode();
-        var body = JsonConvert.DeserializeObject<List<WeatherForecast>>(await response.Content.ReadAsStringAsync());
-        body.ForEach(e => _testOutputHelper.WriteLine(e.ToString()));
+        var body = JsonConvert.DeserializeObject<List<Product>>(await response.Content.ReadAsStringAsync());
         response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
 }
