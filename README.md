@@ -19,4 +19,4 @@ Mobile application were users can advertise something/service that they are sell
   
 
 # Architecture:
-The project follows a simple client
+The project follows a simple client-server architecture
